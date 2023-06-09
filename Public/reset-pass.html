@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><br>
+   <form action="">
+    <label for="">Reset Password</label>
+    <br>
+    <input type="password" name="reset-pwd" id="reset-p">
+    <br><br>
+    <button type="submit" class="" id="reset-btn" formaction="/reset-password">Reset Password</button>
+
+
+   </form>
+
+
+         <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+    <!-- <script>
+        $(document).ready(function(){
+            $("#reset-btn").click(function(){
+  alert();
+  var R_pass=$("#reset-p").val();
+  
+  var obj={
+     type: "get",
+      url: "/reset-password", 
+        data: {
+         Rest:R_pass
+     }
+   }
+   
+   $.ajax(obj).done(function(msgres){
+       alert(msgres);
+   }).fail(function(msgerr){
+       console.log(msgerr.toString());
+ 
+   })
+});
+
+        });
+    </script> -->
+
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pitcher-profile</title>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="CSS/pitcher-profile.css">
+  <link rel="stylesheet" href="CSS/index.css">
+  <script src="Script/pitcher-profile.js"></script>
+</head>
+
+<body onload="loard();">
+  <br><br>
+  <form action="" method="post" enctype="multipart/form-data">
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <h1 class="logo"><a href="index.html">Business Hub</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto " href="Pitcherpage.html">Home</a></li>
+            <!-- <li><a class="nav-link scrollto" href="#">About</a></li>
+            <li><a class="nav-link scrollto" href="#">Services</a></li>
+            <li><a class="nav-link scrollto" href="#">Team</a></li>
+            <li><a class="nav-link scrollto" href="#">Contact</a></li> -->
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+      </div>
+    </header><!-- End Header -->
+
+
+    <div class="container-fluid ">
+
+      <div class="container apy-1 mt-4 ">
+        <!-- Title -->
+        <div class="nav nav-borders mb-4 ">
+          <h2 class="h5 mb-3 mb-lg-0"><a href="" class="text-muted"><i class="bi bi-arrow-left-square me-2"></i></a>
+            Pitcher Profile</h2>
+        </div>
+
+        <!-- Main content -->
+        <div class="row a">
+          <!-- Left side -->
+
+          <div class="col-lg-8">
+            <!-- Basic information -->
+            <div class=" mb-4">
+              <div class="card-body">
+                <h3 class="h6 mb-4">Basic information</h3>
+                <div class="row">
+                  <div class="">
+                    <div class="mb-3">
+                      <label class="form-label">Email ID</label>
+                      <input type="email" class="form-control" id="pemail" name="ppemail" required>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="mb-3">
+                      <label class="form-label">Full Name</label>
+                      <input type="text" id="pname" name="ppname" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="mb-3">
+                      <label class="form-label">Mobile number</label>
+                      <input type="tel" id="pcontact" name="ppcontact" class="form-control " required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Address -->
+            <div class=" mb-4">
+              <div class="card-body">
+                <h3 class="h6 mb-4">Address Details</h3>
+                <div class="mb-3">
+                  <label class="form-label">Address </label>
+                  <input type="text" id="paddress" name="ppaddress" class="form-control" required>
+                </div>
+                <!-- <div class="mb-3">
+                    <label class="form-label">Address Line 2</label>
+                    <input type="text" class="form-control">
+                  </div> -->
+
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="mb-3">
+                      <label class="form-label">State</label>
+                      <input type="text" id="pstate" name="ppstate" class="form-control" required>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="mb-3">
+                      <label class="form-label">City</label>
+                      <input type="text" id="pcity" name="ppcity" class="form-control" required>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="mb-3">
+                      <label class="form-label">ZIP code</label>
+                      <input type="text" id="pzcode" name="ppzcode" class="form-control" required>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class=" mb-4">
+              <div class="card-body">
+                <h3 class="h6 mb-4">Documents</h3>
+                <div class="mb-3">
+                  <label class="form-label">ID Proof </label>
+                  <select class="select2 form-control select2-hidden-accessible"
+                    data-select2-placeholder="Select country" data-select2-id="select2-data-1-gy14" tabindex="-1"
+                    aria-hidden="true" id="pproof" name="ppproof" required>
+                    <option data-select2-id="select2-data-3-ibs9"></option>
+                    <option value="Aadhar Card">Aadhar Card</option>
+                    <option value="PAN Card">PAN Card</option>
+                    <option value="License">License</option>
+                    <option value="Vote Card">Vote card</option>
+                  </select>
+                </div>
+
+                <div class="row">
+                  <div class="">
+                    <div class="mb-3">
+                      <label class="form-label">Upload document</label>
+                      <input type="file" id="pppic" name="profilePic" class="form-control"
+                        onchange="doPrev(pppic,pprev);" accept=".jpg">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="">
+                    <div class="mb-3">
+                      <label class="form-label ">Preview Document</label>
+                      <img src="" height="100px" width="100px" id="pprev" alt="" srcset="">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- //======================================================================================================================= -->
+
+          <!-- Right side -->
+          <div class="col-lg-4">
+            <!-- Status -->
+            <div class=" mb-4">
+              <div class="card-body">
+                <h3 class="h6">Category</h3>
+                <select class="select2 form-control select2-hidden-accessible" data-select2-placeholder="Select country"
+                  data-select2-id="select2-data-1-gy14" tabindex="-1" aria-hidden="true" id="pcategory"
+                  name="ppcategory" required>
+                  <option data-select2-id="select2-data-3-ibs9">Choose category......</option>
+                  <option value="IT">IT</option>
+                  <option value="Grocessary">Grocessary</option>
+                  <option value="Electronics">Electronics</option>
+                  <option value="Furniture">Furniture</option>
+                  <option value="Jewellers">Jewellers</option>
+                  <option value="Cosmetic">Cosmetic</option>
+                  <option value="tech">Technology</option>
+                  <option value="fashion">Fashion</option>
+                  <option value="food">Food</option>
+                  <option value="Industrials">Industrials</option>
+                  <option value="beauty">Beauty</option>
+                  <option value="Pickels">Pickels</option>
+                  <option value="pharmacy">Pharmacy</option>
+                  <option value="appliances">Appliances</option>
+                  <option value="Groceries">Groceries</option>
+                  <option value="Pet Supplies">Pet Supplies</option>
+                  <option value="Sports">Sports</option>
+                  <option value="Stationary">Stationary</option>
+                  <option value="Gifting">Gifting</option>
+                </select>
+              </div>
+
+              <div class="card-body">
+                <div class="mb-3">
+                  <label class="form-label">Company/Site </label>
+                  <input type="text" class="form-control" id="pcompany" name="ppcompany" required>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <div class="mb-3">
+                  <label class="form-label">Estd.</label>
+                  <input type="text" class="form-control" id="pestd" name="ppestd" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Deatiles -->
+            <div class=" mb-4">
+              <div class="card-body">
+                <h3 class="h6">Product Details</h3>
+                <textarea class="form-control " rows="4" placeholder="Leave product information here........."
+                  id="pproduct" name="ppproduct" required></textarea>
+              </div>
+
+              <div class="card-body">
+                <h3 class="h6">Revenue</h3>
+                <input type="text" class="form-control" id="prevenue" name="pprevenue" required>
+              </div>
+
+              <div class="card-body">
+                <h3 class="h6">Gross margin</h3>
+                <input type="text" class="form-control" id="pgross" name="ppgross" required>
+              </div>
+            </div>
+            <!-- Other informations -->
+            <div class=" mb-4">
+              <div class="card-body">
+                <h3 class="h6">Other Iformation</h3>
+                <textarea class="form-control" rows="4" id="pother" name="ppother"
+                  placeholder="Leave other information here....."></textarea>
+              </div>
+            </div>
+            <!-- Notification settings
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="h6">Notification Settings</h3>
+                <ul class="list-group list-group-flush mx-n2">
+                  <li class="list-group-item px-0 d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <h6 class="mb-0">News and updates</h6>
+                      <small>News about product and feature updates.</small>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch">
+                    </div>
+                  </li>
+                  <li class="list-group-item px-0 d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <h6 class="mb-0">Tips and tutorials</h6>
+                      <small>Tips on getting more out of the platform.</small>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" checked="">
+                    </div>
+                  </li>
+                  <li class="list-group-item px-0 d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <h6 class="mb-0">User Research</h6>
+                      <small>Get involved in our beta testing program.</small>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div> -->
+          </div>
+          <div class="d-flex justify-content-center py-2 mb-3">
+            <div class="hstack gap-3  p-2 w-50 h-100">
+              <button class="btn-get-started scrollto   w-75" type="submit" formaction="/psave"><i
+                  class="bi bi-save"></i> <span class="text">Save Profile</span></button>
+              <!-- <input type="submit" value="Signup Here" class="btn btn-danger btn-sm btn-icon-text w-100" formaction="/ppsave"> -->
+              <button class="btn-get-started scrollto   w-75 " type="submit" formaction="/pupdate"><i
+                  class="bi bi-save"></i> <span class="text">Update Profile</span></button>
+            </div>
+          </div>
+        </div>
+
+
+        <input type="hidden" id="phidn" name="pphidn">
+      </div>
+    </div> <!--container-fluid-->
+  </form>
+
+</body>
+
+</html>

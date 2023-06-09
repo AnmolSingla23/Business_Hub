@@ -1,0 +1,143 @@
+
+body {
+    margin-top: 20px;
+    /* background-color: #f2f6fc; */
+    /* width: 100%; */
+    /* height: 100vh; */
+    background: url("../pics/slanted-gradient.png") top center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+}
+
+
+.wrapper{
+
+    width: 500px;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 6px 10px  rgba(176, 203, 235, 0.6);
+}
+
+
+.card{
+
+    height: 350px;
+    width: 500px;
+    background-color:#C62828;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    /* text-align: center!important; */
+
+}
+
+.card::before{
+    position: absolute;
+    width: inherit;
+    height: 100%;
+    content: "";
+    top:-50%;
+    background-color:#EF5350;
+    transform: skewY(345deg);
+    transition:1s ease-in;
+  
+}
+
+
+.card:hover::before{
+    top:-70%;
+    transform: skewY(390deg);
+}
+
+/* .card .image{
+
+    position: absolute;
+    
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card .image img{
+    margin-top: 50px;
+    max-width: 80%;
+    transition: 1s ease-in;
+} */
+
+/* .card:hover .image img{
+    
+    width: 0%;
+} */
+
+.about-product{
+     height: inherit;
+     width: inherit;
+    position: absolute;
+    color: #fff;
+    bottom: -50% !important;
+    /* text-align: center; */
+    left: 5%;
+    transition: 1s ease-in;
+}
+
+
+.card:hover .about-product{
+
+   bottom: 20px !important;
+}
+
+
+/* .buy-now{
+    
+    color: #fffbfb;
+    background-color: #ef5350 !important;
+    border-color: #ef5350 !important;
+    width: 160px;
+    margin-top: 20px;
+} */
+
+
+/* .buy-now:focus{
+    
+    box-shadow: none;
+}
+
+.buy-now:hover{
+    color: #fff;
+    background-color: #e84040 !important;
+    border-color: #e84040 !important;
+
+}
+
+pre
+{
+    font-family: 'Roboto', sans-serif;
+} */
+.a {
+    color: white;
+}
+.btn-get-started {
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-block;
+    padding: 10px 35px 10px 35px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #C62828;
+    border: 2px solid #C62828;
+  }
+  
+  .btn-get-started:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  

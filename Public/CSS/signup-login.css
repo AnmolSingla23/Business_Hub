@@ -1,0 +1,61 @@
+.modell{    
+/* border: 3px solid red; */
+width:400px ;
+height: 400px;
+}
+.headerl{
+    /* display: flex; */
+    justify-items: center;
+    position: relative;
+    top: -70px;
+    /* border: 1px solid rgb(12, 238, 151); */
+    /* border-radius: 50%; */
+    height: 160px;
+    width: inherit;
+    float: right;
+  
+    }
+
+.contentl{
+    display: flex;
+    position: absolute;
+    /* border: 5px solid rgb(166, 255, 0); */
+    margin-top: 85px;
+    height: inherit; width:inherit ;
+    align-items: center;
+ }
+ .modelbody{
+    position: relative;
+    top: -70px;
+    /* border: 4px solid rgb(238, 12, 163); */
+    width:85% ;
+    }
+.loginimg{
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    /* background-color: burlywood; */
+    height: 160px;
+    width: 160px;
+    margin-left: 30%;
+}
+.a {
+    color: white;
+    position: relative;
+    background-color: rgba(219, 215, 215, 0.301);
+    border-radius: 2%;
+  
+  }
+  .cl{
+    margin-top: 20%;
+    margin-right: 5%;
+  }
+.ok{
+    /* background-color: greenyellow; */
+    border: 1px solid green;
+}
+.not-ok{
+    /* background-color: red; */
+    border: 1px solid red;
+}
+
+

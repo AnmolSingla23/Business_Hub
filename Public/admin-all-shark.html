@@ -1,0 +1,243 @@
+<html>
+
+<head>
+    <title>Show all Shark</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+    <script src="Script/angular.min.js"></script>
+    <link rel="stylesheet" href="CSS/index.css">
+    <script>
+
+        var mymodule = angular.module("itsModule", []);
+        mymodule.controller("itsController", function ($scope, $http) {
+            //-------------------------------------------------------
+            $scope.jsonArray = [];
+            $scope.showShark = function () {
+                var url = "/show-all-shark";
+                $http.get(url).then(fxOk, fxNotOk);
+                function fxOk(responsekuch) {
+                    $scope.jsonArray = responsekuch.data;
+                }
+                function fxNotOk(response) {
+                    alert(response.data);
+                }
+            }
+
+        });
+    </script>
+
+    <style>
+        body {
+            background: url("pics/slanted-gradient.png");
+        }
+
+        .nav-borders {
+
+            color: white;
+            width: 160px;
+            border-bottom-width: 0.125rem;
+            border-bottom-style: solid;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 80px;
+
+        }
+    </style>
+</head>
+
+<body ng-app="itsModule" ng-controller="itsController" ng-init="showShark();">
+    <br><br>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a href="index.html">Business Hub</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto " href="admin-page.html">Home</a></li>
+                    <!-- <li><a class="nav-link scrollto" href="#">About</a></li>
+              <li><a class="nav-link scrollto" href="#">Services</a></li>
+              <li><a class="nav-link scrollto" href="#">Team</a></li>
+              <li><a class="nav-link scrollto" href="#">Contact</a></li> -->
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <div class="nav nav-borders my-4">
+        <h2 class="h5 mb-3 mb-lg-0"><a href="" class="text-muted"><i class="bi bi-arrow-left-square me-2"></i></a>All
+            Shark Data</h2>
+    </div>
+
+    <div class="extra bg-danger"></div>
+
+    <div class="container mt-3">
+
+        <div class="row">
+            <table class="table table-dark table-striped mt-3  col-md-12" border="1">
+                <tr align="center">
+                    <th>S.No</th>
+                    <th>Photo</th>
+                    <th>Email_Id</th>
+                    <th>F.Name</th>
+                    <th>L.Name</th>
+                    <th>Contact</th>
+                    <th>DOB</th>
+                    <th>Address</th>
+                    <th>State</th>
+                    <th>Dist</th>
+                    <th>Company</th>
+                    <th>No. of Investment</th>
+                    <th>In Companies</th>
+                    <th>Domains/Fields</th>
+                    <th>Other Info</th>
+                </tr>
+
+                <tr ng-repeat="obj in jsonArray" align="center">
+                    <th>
+                        {{$index+1}}
+                    </th>
+
+                    <td>
+                        <img src="pics-uploads/{{obj.profilepic}}" alt="" width="50" height="50">
+                    </td>
+
+                    <td>
+                        {{obj.email}}
+                    </td>
+
+                    <td>
+                        {{obj.fname}}
+                    </td>
+
+                    <td>
+                        {{obj.lname}}
+                    </td>
+
+                    <td>
+                        {{obj.mobile}}
+                    </td>
+
+                    <td>
+                        {{obj.dob}}
+                    </td>
+
+                    <td>
+                        {{obj.address}}
+                    </td>
+
+                    <td>
+                        {{obj.state}}
+                    </td>
+
+                    <td>
+                        {{obj.dist}}
+                    </td>
+
+                    <td>
+                        {{obj.company}}
+                    </td>
+
+                    <td>
+                        {{obj.noinvestment}}
+                    </td>
+
+                    <td>
+                        {{obj.incompany}}
+                    </td>
+
+                    <td>
+                        {{obj.domainfields}}
+                    </td>
+
+                    <td>
+                        {{obj.otherinfo}}
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="extraspace bg-light"></div>
+
+
+    <!-- <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <h2 class="footer-heading">Petcare</h2>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    <ul class="ftco-footer-social p-0">
+                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
+                                title="Twitter"><span class="fa fa-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
+                                title="Facebook"><span class="fa fa-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
+                                title="Instagram"><span class="fa fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <h2 class="footer-heading">Location</h2>
+                    <div class="block-21 mb-4 d-flex">
+                        <a class="img mr-4 rounded">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3447.8807337916064!2d74.95013941511905!3d30.21195128182175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391732a4f07278a9%3A0x4a0d6293513f98ce!2sBanglore%20Computer%20Education!5e0!3m2!1sen!2sin!4v1673849575769!5m2!1sen!2sin"
+                                width="200" height="130" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <h2 class="footer-heading">Have a Questions?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon fa fa-map"></span><span class="text">Bathinda</span></li>
+                            <li><a href="#"><span class="icon fa fa-phone"></span><span
+                                        class="text">+91-62807-38720</span></a></li>
+                            <li><a href="#"><span class="icon fa fa-paper-plane"></span><span
+                                        class="text">vishalibansal47@gmail</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-12 text-center">
+
+                    <br>
+                    <p class="copyright">
+
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div> -->
+
+</body>
+
+</html>
